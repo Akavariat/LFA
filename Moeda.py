@@ -12,14 +12,14 @@ def check_coin():
 
     if coin not in allowed:
       print("Moeda inválida!")
-
-    total += coin
+      return 0
 
     if total == 0.45:
       return 1
 
     if total >= 0.45:
         print("Toma sua coca! Perdeu {0:.0f} centavos!".format((total - 0.45) * 100))
+    
 
 res = check_coin()
 
@@ -28,4 +28,3 @@ if res == 0:
 
 elif res == 1:
   print("Toma sua Coca!")
-
