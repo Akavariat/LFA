@@ -4,19 +4,22 @@ def read_coin():
   return x
 
 def check_coin():
-  t = 0
+  total = 0
   allowed = [0.10, 0.25]
 
-  while(t <= 0.45):
+  while(total <= 0.45):
     coin = read_coin()
 
     if coin not in allowed:
       print("Moeda inválida!")
 
-    t += coin
+    total += coin
 
-    if t >= 0.45:
-        return 1
+    if total == 0.45:
+      return 1
+
+    if total >= 0.45:
+        print("Toma sua coca! Perdeu {0:.0f} centavos!".format((total - 0.45) * 100))
 
 res = check_coin()
 
