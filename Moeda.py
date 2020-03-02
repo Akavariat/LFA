@@ -20,7 +20,7 @@ def check_coin():
       return 1
 
     if total > 45:
-        print("Toma sua coca! Perdeu {0:.0f} centavos!".format(total - 45))
+        print("Toma sua coca! Perdeu {} centavos!".format(total - 45))
 
 res = check_coin()
 
@@ -29,4 +29,3 @@ if res == 0:
 
 elif res == 1:
   print("Toma sua Coca!")
-
