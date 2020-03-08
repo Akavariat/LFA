@@ -33,7 +33,7 @@ def main():
     total += value
     status = dfa.verify(value, total)
 
-    if status == True:
+    if status:
       if dfa.get_state() == 3:
         print("Aprovado! Valor final: {}".format(total))
         break
